@@ -113,7 +113,7 @@ class Carts extends AddressComponent {
             };
             try {
                 const newCart = new CartModel(checkoutInfo);
-                const cart await newCart.save();
+                const cart = await newCart.save();
                 res.send(cart);
             } catch(err) {
                 console.log('save cart data failed');

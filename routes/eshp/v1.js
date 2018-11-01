@@ -13,6 +13,7 @@ import Order from '../../controller/eshp/v1/order';
 import Hongbao from '../../controller/eshp/promotion/hongbao';
 import Entry from '../../controller/eshp/v1/entry';
 import Explain from '../../controller/eshp/v1/explain';
+import Shop from '../../controller/eshp/shopping/shop';
 
 const baseHandle = new BaseComponent();
 const router = express.Router();
@@ -42,6 +43,6 @@ router.post('/login', User.login);
 router.get('/signout', User.signout);
 router.post('/changepassword', User.changePassword);
 router.get('/profile/explain', Explain.getExplain);
-router.get('/restaurants', Food.searchRestaurant);
+router.get('/restaurants', Shop.searchRestaurant);
 
 export default router;

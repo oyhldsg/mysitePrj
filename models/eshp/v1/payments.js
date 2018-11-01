@@ -5,7 +5,7 @@ import paymentsData from '../../../InitData/eshp/payments';
 
 const Schema = mongoose.Schema;
 
-cost paymentsSchema = new Schema({
+const paymentsSchema = new Schema({
     description: String,
     disabled_reason: String,
     id: Number,
@@ -15,7 +15,7 @@ cost paymentsSchema = new Schema({
     select_state: Number
 });
 
-cost Payments = mongoose.model('Payments', paymentsSchema);
+const Payments = mongoose.model('Payments', paymentsSchema);
 
 Payments.findOne((err, data) => {
     if (!data) {

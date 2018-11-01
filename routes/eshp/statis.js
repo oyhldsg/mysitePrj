@@ -1,7 +1,7 @@
 'use strict';
 
 import express from 'express';
-import Statis from '../../controller/statis/statis';
+import Statis from '../../controller/eshp/statis/statis';
 
 const router = express.Router();
 

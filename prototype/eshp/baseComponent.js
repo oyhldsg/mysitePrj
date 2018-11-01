@@ -101,7 +101,7 @@ export default class BaseComponent {
     }
 
     async getPath(req, res) {
-        return new Promise(resolve, reject) => {
+        return new Promise((resolve, reject) => {
             const form = formidable.IncomingForm();
             form.uploadDir = './public/img';
             form.parse(req, async(err, fields, files) => {

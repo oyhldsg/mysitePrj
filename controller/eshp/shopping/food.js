@@ -154,7 +154,7 @@ class Food extends BaseComponent {
             let restaurant;
             try {
                 category = await MenuModel.findOne({id: fields.category_id});
-                restaurant await ShopModel.findOne({id: fields.restaurant_id});
+                restaurant = await ShopModel.findOne({id: fields.restaurant_id});
             } catch(err) {
                 console.log('get food kind and restaurant info failed');
                 res.send({

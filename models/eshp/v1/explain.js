@@ -11,7 +11,7 @@ const explainSchema = new Schema({
 
 const Explain = mongoose.model('Explain', explainSchema);
 
-Eplain.findOne((err, data) => {
+Explain.findOne((err, data) => {
     if (!data) {
         Explain.create({data: explainData});
     }

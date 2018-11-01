@@ -162,8 +162,8 @@ class Shop extends AddressComponent {
                     icon_color: "999999",
                     icon_name: "票",
                     id: 4,
-                    name; "开发票"
-                })
+                    name: "开发票"
+                });
             }
 
             try {

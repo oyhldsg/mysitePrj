@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    port: 80,
+    port: 8001,
     url: 'mongodb://localhost:27017/mysrv',
     session: {
         name: 'SID',

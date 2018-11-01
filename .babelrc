@@ -3,6 +3,6 @@
     "plugins": [
         "transform-async-to-generator",
         "transform-es2015-modules-commonjs",
-        "transofrm-export-extensions"
+        "transform-export-extensions"
     ]
 }

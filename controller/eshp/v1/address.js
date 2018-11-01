@@ -123,7 +123,7 @@ class Address extends BaseComponent {
         }
     }
 
-    async getAddAddressById(req, res, next) {
+    async getAddressById(req, res, next) {
         const address_id = req.params.address_id;
         if (!address_id || !Number(address_id)) {
             res.send({

@@ -6,7 +6,7 @@ import Admin from '../../controller/eshp/admin/admin';
 const router = express.Router();
 
 router.post('/login', Admin.login);
-router.get('/singout', Admin.singout);
+router.get('/signout', Admin.signout);
 router.get('/all', Admin.getAllAdmin);
 router.get('/count', Admin.getAdminCount);
 router.get('/info', Admin.getAdminInfo);

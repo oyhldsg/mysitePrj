@@ -99,8 +99,8 @@ class User extends AddressComponent {
         const user_id = sid || qid;
         if (!user_id || !Number(user_id)) {
             res.send({
-                status: 0
-                    type: 'GET_USER_INFO_FAILED',
+                status: 0,
+                type: 'GET_USER_INFO_FAILED',
                 message: '通过session获取用户信息失败'
             });
             return;

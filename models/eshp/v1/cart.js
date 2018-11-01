@@ -41,7 +41,7 @@ const cartSchema = Schema({
         is_online_paid: {type: Number, default: 1},
         is_ontime_available: {type: Number, default: 0},
         must_new_user: {type: Number, default: 0},
-        must pay_online: {type: Number, default: 0},
+        must_pay_online: {type: Number, default: 0},
         ontime_status: {type: Number, default: 0},
         ontime_unavailable_reason: String,
         original_total: Number,
