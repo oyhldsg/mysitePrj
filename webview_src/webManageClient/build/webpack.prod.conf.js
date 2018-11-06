@@ -8,6 +8,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+var uglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var env = config.build.env;
 
@@ -28,9 +29,9 @@ var webpackConfig = merge(baseWebpackConfig, {
         new webpack.DefinePlugin({
             'process.env': env
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
+        new uglifyJsPlugin({
+            uglifyOptions: {
+                compress: {warnings: false}
             },
             sourceMap: true
         }),
@@ -58,7 +59,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             minChunks: function(module, count) {
                 return (
                         module.resource &&
-                        /\.js$/.text(module.resource) &&
+                        /\.js$/.test(module.resource) &&
                         module.resource.indexOf(
                             path.join(__dirname, '../node_modules')
                             ) === 0

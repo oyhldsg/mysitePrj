@@ -123,7 +123,7 @@
 </template>
 
 <script>
-    import headTop from '../components/headTop'
+    import headTop from '@/components/headTop'
     import {baseUrl, baseImgPath} from '@/config/env'
     import {cityGuess, getRestaurants, getRestaurantsCount, foodCategory, updateRestaurant, searchplace, deleteRestaurant} from '@/api/getData'
     export default {

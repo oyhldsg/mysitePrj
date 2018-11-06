@@ -16,7 +16,7 @@
 
 <script>
     import {signout} from '@/api/getData'
-    import {baseImgPath} from '@config/env'
+    import {baseImgPath} from '@/config/env'
     import {mapActions, mapState} from 'vuex'
 
     export default {
