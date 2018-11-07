@@ -6,7 +6,6 @@ var merge = require('webpack-merge');
 var baseWebpackConfig = require('./webpack.base.conf');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var uglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var env = config.build.env;
 
@@ -32,10 +31,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         new webpack.DefinePlugin({
             'process.env': env
         }),
-        new uglifyJsPlugin({
-            uglifyOptions: {
-                compress: {warnings: false}
-            }
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {warnings: false}
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new ExtractTextPlugin(utils.assetsPath('css/[name].css')),

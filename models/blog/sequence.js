@@ -2,7 +2,7 @@
 
 import mongoose from 'mongoose';
 
-SequenceSchema = new mongoose.Schema({
+const SequenceSchema = new mongoose.Schema({
     _id: String,
     next: Number
 });

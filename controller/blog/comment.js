@@ -21,7 +21,7 @@ class Comment {
                     like: 0
                 };
                 const commentItem = new CommentModel(comment);
-                await commentItem.save();
+                commentItem.save();
             }
         })
     }
